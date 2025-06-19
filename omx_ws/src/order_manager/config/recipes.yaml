@@ -1,0 +1,20 @@
+recipes:
+  "0":
+    name: americano
+    sequence: [1, 2, 3, 1, 7, 1, 7, 1, 8, 1, 4, 0]
+    ratios:   { coffee: 30, sugar: 6, creamer: 8, cocoa: 0 }
+  
+  "1":
+    name: latte
+    sequence: [1, 2, 3, 1, 6, 1, 6, 1, 7, 1, 8, 1, 4, 0]
+    ratios:   { coffee: 20, sugar: 4, creamer: 10, cocoa: 0 }
+  
+  "2":
+    name: mocha
+    sequence: [1, 2, 3, 1, 6, 1, 7, 1, 7, 1, 8, 1, 4, 0]
+    ratios:   { coffee: 25, sugar: 5, creamer: 8, cocoa: 2 }
+
+  "3":
+    name: cappuccino
+    sequence: [1, 2, 3, 1, 6, 1, 7, 1, 4, 0]
+    ratios:   { coffee: 28, sugar: 5, creamer: 7, cocoa: 1 }

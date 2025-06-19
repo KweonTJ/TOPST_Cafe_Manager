@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="order_manager" type="serial_to_ros.py"
+        name="serial_bridge" output="screen">
+    <param name="port" value="/tmp/ttyV0"/>
+    <param name="baud" value="115200"/>
+  </node>
+</launch>

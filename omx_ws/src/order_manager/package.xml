@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <!-- 패키지 기본 정보 -->
+  <name>order_manager</name>
+  <version>0.0.1</version>
+  <description>QR 주문 → 레시피 매핑 → 로봇 포즈 시퀀스·재료 비율 퍼블리시 노드</description>
+
+  <!-- 메인테이너 / 라이선스 -->
+  <maintainer email="kweontj0701@naver.com">KweonTJ</maintainer>
+  <license>MIT</license>
+
+  <!-- 빌드 도구 의존성 -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- 런타임·컴파일 의존성 -->
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+
+  <!--Python 브리지 노드를 위해 추가 -->
+  <depend>rospy</depend>
+  <exec_depend>python3-serial</exec_depend>
+</package>
+

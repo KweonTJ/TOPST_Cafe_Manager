@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- recipes.yaml을 파라미터 서버에 올림 -->
+  <rosparam
+      file="$(find order_manager)/config/recipes.yaml"
+      command="load"/>
+
+  <!-- ───── Serial→ROS bridge ───── -->
+  <node
+      pkg="order_manager"
+      type="serial_to_ros.py"
+      name="serial_bridge"
+      output="screen">
+    <param name="port" value="/dev/ttyUSB0"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <!-- 주문 매니저 노드 실행 -->
+  <node
+      pkg="order_manager"
+      type="order_manager"
+      name="order_manager"
+      output="screen"/>
+
+</launch>

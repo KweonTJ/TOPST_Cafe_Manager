@@ -1,0 +1,16 @@
+<launch>
+  <!-- 로봇 컨트롤 노드(기존) -->
+  <include file="$(find open_manipulator_controller)/launch/open_manipulator_controller.launch"/>
+
+  <!-- 텔레옵 키보드(선택) -->
+  <node pkg="open_manipulator_teleop"
+        type="open_manipulator_teleop_keyboard"
+        name="teleop_keyboard"
+        output="screen" />
+
+  <!-- ★ 시퀀스 자동 실행 노드 -->
+  <node pkg="open_manipulator_teleop"
+        type="coffee_cycle_executor"
+        name="cycle_executor"
+        output="screen" />
+</launch>
